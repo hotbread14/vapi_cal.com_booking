@@ -12,7 +12,7 @@ async function getAvailableSlots() {
     const endTime = end.toISOString();
 
     const eventTypeId = 2905905;
-    const eventTypeSlug = 'ai-voice-agent-discovery';
+    const eventTypeSlug = '15 min';
     const duration = 30;
     const url = `https://api.cal.com/v2/slots/available?startTime=${encodeURIComponent(startTime)}&endTime=${encodeURIComponent(endTime)}&eventTypeId=${eventTypeId}&eventTypeSlug=${eventTypeSlug}&duration=${duration}`;
 
