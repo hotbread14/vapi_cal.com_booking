@@ -11,7 +11,7 @@ async function getAvailableSlots() {
     end.setDate(now.getDate() + 7);
     const endTime = end.toISOString();
 
-    const eventTypeId = 1409993;
+    const eventTypeId = 2905905;
     const eventTypeSlug = 'ai-voice-agent-discovery';
     const duration = 30;
     const url = `https://api.cal.com/v2/slots/available?startTime=${encodeURIComponent(startTime)}&endTime=${encodeURIComponent(endTime)}&eventTypeId=${eventTypeId}&eventTypeSlug=${eventTypeSlug}&duration=${duration}`;
@@ -34,7 +34,7 @@ async function getAvailableSlots() {
             for (const date in data.data.slots) {
                 data.data.slots[date].forEach(slot => {
                     const utcDate = new Date(slot.time);
-                    const sydneyTime = utcDate.toLocaleString('en-AU', { timeZone: 'Australia/Sydney' });
+                    const sydneyTime = utcDate.toLocaleString('en-AU', { timeZone: 'America/Toronto' });
                     slotsInSydneyTime.push({ date, time: sydneyTime });
                 });
             }
